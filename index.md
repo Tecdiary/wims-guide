@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: ./logo.png
+heroImage: ../assets/img/logo.png
 heroAlt: WIMS
 heroText: WIMS
 tagline: Warehouse Inventory Management Solution
