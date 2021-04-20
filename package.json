@@ -7,7 +7,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "serve": "vitepress serve",
-    "prod": "vitepress build && rm -rf ./docs && mv ./.vitepress/dist ./ && mv ./dist ./docs && cp ./logo.png ./docs/logo.png"
+    "prod": "vitepress build && rm -rf ./docs && mv ./.vitepress/dist ./ && mv ./dist ./docs && cp ./logo.png ./docs/logo.png && cp ./logo.png ./docs/assets/logo.png"
   },
   "author": "Mian Saleem",
   "license": "ISC",
