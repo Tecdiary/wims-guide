@@ -1,0 +1,17 @@
+{
+  "name": "wims-guide",
+  "version": "1.0.0",
+  "description": "Warehouse Inventory Management Solution (WIMS)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
+    "prod": "vitepress build && mv ./.vitepress/dist ./docs"
+  },
+  "author": "Mian Saleem",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^0.13.0"
+  }
+}
