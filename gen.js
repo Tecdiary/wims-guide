@@ -6,6 +6,22 @@ function preProcessMd() {
     let pageBreak = "\n\n<div style='page-break-before: always;'></div>\n\n";
     let nd = data
       .toString()
+      .replace(
+        /Standard License\?/gs,
+        '<h3 class="h3">Standard License?</h3>'
+      )
+      .replace(
+        /Server Requirements/gs,
+        '<h3 class="h3">Requirements</h3>'
+      )
+      .replace(
+        /Installing locally\?/gs,
+        '<h3 class="h3">Installing locally?</h3>'
+      )
+      .replace(
+        /Installing on cPanel\?/gs,
+        '<h3 class="h3">Installing on cPanel?</h3>'
+      )
       .replace(/::: tip/gs, "")
       .replace(/::: warning/gs, "")
       .replace(/:::/gs, "")

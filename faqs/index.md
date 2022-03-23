@@ -56,7 +56,7 @@ You can setup cron job as following:
 * * * * * cd path/to/your/wims && php artisan schedule:run >> /dev/null 2>&1
 ```
 
-If you need help, please check with your host and ask them how you can setup cron job for Laravel, docs can be found at [https://laravel.com/docs/6.x/scheduling](https://laravel.com/docs/6.x/scheduling)
+If you need help, please check with your host and ask them how you can setup cron job for Laravel, docs can be found at [https://laravel.com/docs/scheduling](https://laravel.com/docs/scheduling)
 
 ### Why I need to set cron job?
 

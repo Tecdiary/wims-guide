@@ -1,9 +1,9 @@
 <div class="cover">
 
-# Warehouse Inventory Management Solution
+# **WIMS**
 
-# **(WIMS)**
+## Warehouse Inventory Management Solution
 
-## Documentation
+### Documentation
 
 </div>

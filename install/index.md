@@ -22,20 +22,20 @@ We have added the installer for easy installation experience and it can be acces
 If you have purchased standard license, please run install dependencies before following these steps by running `composer install`
 :::
 
-::: warning Requirements
-**PHP 7.4+ & MySQL 5.7.8+, Installer will check other requirements**
+::: warning Server Requirements
+**PHP 8.0.3+ & MySQL 5.7.8+, Installer will check other requirements**
 :::
 
 ::: warning Installing on cPanel?
 Please don't upload the files to `public_html` directory but create `wims` directory one level above (outside public_html) in main directory that is not accessible by public and then upload the files to this `wims` directory. Lastly create subdomain that points to the `wims/public` directory. Now replace the `yourdomain.com` below with `subdomain.yourdoamin.com`
 :::
 
-::: warning Installing locally?
-Please add a virtual host that should point to public directory in wims `full/path/to/wims/public` directory then access the virtual host in browser.
+::: tip
+If you need to install in as main domain `yourdomain.com` but not subdoamin `subdomain.yourdoamin.com`, you still follow the above instructions and then create symbolic link for public_html `ln -s /wims/public /public_html`. You can check with your host about this and tell them that you want to secure Laravel installation. If that is no possible then you can upload to `public_html` folder and apache `.htaccess` will redirect traffic to the public folder.
 :::
 
-::: tip
-If you need to install in as main domain `yourdomain.com` but not subdoamin `subdomain.yourdoamin.com`, you still follow the above instructions and then create symbolic link for public_html `ln -s /wims/public /public_html`. You can check with your host about this and tell them that you want to secure Laravel installation.
+::: warning Installing locally?
+Please add a virtual host that should point to public directory in wims `full/path/to/wims/public` directory then access the virtual host in browser.
 :::
 
 You can access the installer by adding `/install` at the end of your domain i.e,
@@ -89,6 +89,18 @@ We are almost done, it's time to finalize the installation. If you need some dem
 ::: tip Can I start again?
 Yes, if there is any issue on any step and you can't pass then you can cancel and start over again with new database or settings.
 :::
+
+## Step 8: Create Storage Link
+
+You can visit the following url to create storage link
+
+`http://yourWIMSURL/commands/storage_link?key=youLicenseKeyOrPurchaseCode`
+
+Otherwise you can run the following command from main WIMS folder in your terminal.
+
+```bash
+cd path/to/your/wims && php artisan storage:link
+```
 
 ## After Install
 

@@ -27,12 +27,17 @@ Please download the latest file and update the following files & folder of your 
 - `composer.json`
 - `composer.lock`
 
-Now if you can login as `super admin` then you can visit `http://yourWIMSURL/update/database` otherwise you will need to update the database by running the following command from your main WIMS folder.
+Now you can visit the following url to run the migration
+
+`http://yourWIMSURL/commands/update_database?key=youLicenseKeyOrPurchaseCode`
+
+Otherwise you will need to update the database by running the following command from main WIMS folder in your terminal.
 
 ```bash
-cd path/to/your/wims
-php artisan app:update
+cd path/to/your/wims && php artisan migrate
 ```
+
+<!-- # php artisan update:app -->
 
 ## Request Update
 
